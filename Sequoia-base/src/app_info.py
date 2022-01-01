@@ -1,3 +1,7 @@
+# Module: app_info.py  /  version: 1.5  /  build: 20211223
+# Purpose: Retrieve application and system information
+# Harris Georgiou (c) 2021, Licence: CC-BY-SA/4.0i
+
 # use only standard modules for cross-platform portability
 import os, platform
 
