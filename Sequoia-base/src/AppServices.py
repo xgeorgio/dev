@@ -1,10 +1,19 @@
+# Module: AppServices.py / version: 1.5 / build: 20211223
+# Purpose: Core services for application modules
+# Harris Georgiou (c) 2021, Email:hgeorgiou@unipi.gr
+
+# use only standard modules for cross-platform portability
 import configparser, logging, logging.handlers, argparse, os
-import app_info
+import app_info    # local module
+
 
 class AppServices():
+	'''Application services bundle used as a skeleton, including application information,
+	   configurator, command-line options parser and event logger.'''
 
     def __init__(self, app_name='<ApplicationName>', app_version='<0.0.0>', app_copyright='<copyright>', 
                  app_config='<default_cfg_filename>'):
+		'''Default constructor-initializer'''
         self.app_name=app_name
         self.app_version=app_version
         self.app_copyright=app_copyright
@@ -12,15 +21,18 @@ class AppServices():
 
 
     def get_sys_info(self):
+		'''Wrapper method for system information retriever'''
         return (app_info.get_sys_info())
 
 
     def get_app_info(self):
+		'''Wrapper method for application information retriever'''
         # retrieve application and system info, return as string
         return (app_info.get_app_info( self.app_name, self.app_version, self.app_copyright))
 
 
     def init_opt(self):
+		'''Initializer for command-line options parser (see 'argparse' for details)'''
         self.cmdopt = argparse.ArgumentParser(description=self.app_name+' core functionality.')
         # options '-h' and '--help' are implemented implicitly
         self.cmdopt.add_argument('--version', action='version', version='%(prog)s '+self.app_version)
@@ -35,6 +47,7 @@ class AppServices():
 
 
     def init_cfg(self, fname=None):
+		'''Initializer for configuration options (see 'configparser' for details)'''
         if (fname != None):
             cfg_filename = fname     # use the given filename if not null
         else:
@@ -45,6 +58,7 @@ class AppServices():
 
 
     def init_log_timeR(self, fname, loglevel, logwhen, loginterval, logcycle):
+		'''Initializer for event logger with time-based file rotation (see 'logging' for details)'''
         # initialize logger with time-based rotation
         self.log = logging.getLogger(__name__)      # use module name as logger id
         self.log.setLevel(loglevel)                 # set logging level (from string)
@@ -56,6 +70,7 @@ class AppServices():
 
 
     def init_log_sizeR(self, fname, loglevel, loglimit, logcycle):
+		'''Initializer for event logger with size-based file rotation (see 'logging' for details)'''
         # initialize logger with size-based rotation
         self.log = logging.getLogger(__name__)      # use module name as logger id
         self.log.setLevel(loglevel)                 # set logging level (from string)
@@ -67,8 +82,8 @@ class AppServices():
         self.log.addHandler(fh)
 
 
-# MAIN: stand-alone mode, used for unit testing only
 if __name__ == '__main__':
+	'''MAIN: stand-alone mode, used for unit testing (skeleton example)'''
     #app = AppServices()
     app = AppServices(app_name='SEQUOIA Engine', app_version='0.0.1 (beta)', 
                       app_copyright='Harris Georgiou (c) 2020, Licence: CC-BY-SA/4.0i',
@@ -92,5 +107,3 @@ if __name__ == '__main__':
     #app.init_log_timeR(app.cfg['logging']['filename'], app.cfg['logging']['level'], app.cfg['logging']['when'], app.cfg['logging']['interval'], app.cfg['logging']['backupCount'])
     app.log.debug('another test message for log')
     print('logging level: ', app.log.getEffectiveLevel())
-
-    
