@@ -13,12 +13,12 @@ This is a small skeleton REST API micro-server, using GET query strings for comm
 Examples of client request, e.g. via web browser:
 <pre>
 http://localhost:15387/?command=VER
-http://localhost:15387/?command=HELLO&content=someone
 http://localhost:15387/?command=ECHO&content='hello there to you too'
+http://localhost:15387/?command=HELLO&content=someone
 http://localhost:15387/?command=QUIT
 </pre>
 
-Example of console output:<br/>
+Example of server console output:<br/>
 <pre>
 WSGI micro-service core, version 0.0.1 (build: 20211224)
 Harris Georgiou (c) 2021, Licence: CC-BY-NC-SA/4.0i 
@@ -36,7 +36,7 @@ Server listening at port 15387
 Serving at port 15387...
 -> Request(2): command='VER' , content='someone'
 -> Request served in 0.0  msec
--> Request(1): command='ECHO' , content='someone'
+-> Request(1): command='ECHO' , content='hello there to you too'
 -> Request served in 0.0  msec
 -> Request(3): command='HELLO' , content='someone'
 -> Request served in 0.0  msec
