@@ -4,8 +4,11 @@ Title:<br/>
 Description:<br/>
 This is a small skeleton REST API micro-server, using GET query strings for command-content pairs as a request. 
 * Available 'command' parameter (case-insensitive): 'ECHO', 'VER', 'HELLO", 'QUIT' (server shutdown). 
-* Available 'content' parameter is not current in use, only 'HELLO' shows its retrieval and display.
-* ll configuration is handled via external files (see 'cfg' folder) and there is also logging (see 'log' folde
+* Available 'content' parameter is used by 'HELLO' and 'ECHO' commands.
+* All configuration is handled via external files (see 'cfg' folder).
+* There is also automatic logging (see 'log' folder) and command-line options parsing.
+* Clients are served only if they are in the allowed IP list, defined in the configuration file.
+* At the console, the server can be shut down by pressing Ctrl+C (break).
 
 Examples of client request, e.g. via web browser:
 <pre>
