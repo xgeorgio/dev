@@ -2,7 +2,18 @@ Title:<br/>
 <b>microsvr-base: WSGI-based micro-server (REST API) skeleton using Python</b>
 
 Description:<br/>
+This is a small skeleton REST API micro-server, using GET query strings for command-content pairs as a request. 
+* Available 'command' parameter (case-insensitive): 'ECHO', 'VER', 'HELLO", 'QUIT' (server shutdown). 
+* Available 'content' parameter is not current in use, only 'HELLO' shows its retrieval and display.
+* ll configuration is handled via external files (see 'cfg' folder) and there is also logging (see 'log' folde
 
+Examples of client request, e.g. via web browser:
+<pre>
+http://localhost:15387/?command=VER
+http://localhost:15387/?command=HELLO&content=someone
+http://localhost:15387/?command=ECHO&content='hello there to you too'
+http://localhost:15387/?command=QUIT
+</pre>
 
 Example of console output:<br/>
 <pre>
