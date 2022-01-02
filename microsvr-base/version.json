@@ -1,0 +1,21 @@
+{
+    "application": {
+        "name": "WSGI micro-service core",
+        "version": "0.0.1",
+        "build": "20211224"
+        },
+    "update": {
+        "last": "20211224T202800Z"
+    },
+    "manifest": {
+        "filelist": [
+            {"name": "version.json", "hash": "0000"},
+            {"name": "micro_svr.py", "hash": "0000"},
+            {"name": "app_info.py", "hash": "0000"},
+            {"name": "cfg/settings.cfg", "hash": "0000"},
+            {"name": "sql/linregr.sql", "hash": "0000"},
+            {"name": "sql/variance.sql", "hash": "0000"},
+            {"name": "sql/stats.sql", "hash": "0000"}
+        ]        
+    }
+}

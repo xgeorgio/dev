@@ -1,0 +1,11 @@
+2021-12-24 20:03:50,910; DEBUG; Server initialized, listening port 15387
+2021-12-24 20:04:28,214; DEBUG; Server initialized, listening port 15387
+2021-12-24 20:24:53,548; DEBUG; Server initialized, listening port 15387
+2021-12-24 20:26:33,458; CRITICAL; Server shutdown (QUIT command)
+2021-12-24 20:28:04,139; DEBUG; Server initialized, listening port 15387
+2021-12-24 20:28:20,198; CRITICAL; Server shutdown (QUIT command)
+2021-12-24 20:32:05,055; DEBUG; Server initialized, listening port 15387
+2022-01-02 13:01:55,560; DEBUG; Server initialized, listening port 15387
+2022-01-02 13:04:14,171; CRITICAL; Server shutdown (QUIT command)
+2022-01-02 13:05:19,525; DEBUG; Server initialized, listening port 15387
+2022-01-02 13:06:07,180; CRITICAL; Server shutdown (QUIT command)
