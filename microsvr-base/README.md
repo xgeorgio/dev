@@ -9,6 +9,7 @@ This is a small skeleton REST API micro-server, using GET query strings for comm
 * There is also automatic logging (see 'log' folder) and command-line options parsing.
 * Clients are served only if they are in the allowed IP list, defined in the configuration file.
 * At the console, the server can be shut down by pressing Ctrl+C (break).
+There is also a 'sql' folder with sample SQL scripts for implementing statistics retrieval from a database, when the host RDBMS does not have such primitives (e.g. variance, linear regression).
 
 Examples of client request, e.g. via web browser:
 <pre>
