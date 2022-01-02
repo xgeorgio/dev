@@ -1,8 +1,34 @@
 Title:<br/>
 <b>microsvr-base: WSGI-based micro-server (REST API) skeleton using Python</b>
 
-Description:
-Data Analytics (DA) and Machine Learning (ML) in the Big data era depend heavily on handling huge volumes of data efficiently and in a generic way, exploiting standardized protocols for interface and storage compatibility. However, implementation-agnostic functionality is necessary to ensure application decoupling and easy maintenance of the DA/ML codebase. In many cases, SQL aggregations and statistics extensions can provide a similar abstraction layer, but this usually comes at the cost of constructing very lengthy and complex queries for functionality that can be implemented in just few lines of code e.g. in Python, or cannot be implemented at all if it requires advanced statistics, machine learning algorithms or hardware acceleration. “Sequoia” is a starting codebase for such a generic abstraction layer between DA/ML and data management, providing an SQL-like scripting language with rich and “dense” functionality with minimal implementation details exposed to the application level. It provides a full compiler/interpreter developed in pure Python with lex/yacc functionality, implementing DA/ML “primitives” like unified data source import and in-memory database, automated data pre-processing (e.g. missing values removal, error checking, noise removal, trend removal, normalization, rescaling), data resampling, advanced statistics, n-order regression, etc. More advanced primitives can provide adaptive signal processing for time series, including Wiener filtering, Kalman filtering, RLS/LMS filtering, etc. Furthermore, it can be easily extended to application-specific functionality, e.g. implementing 2-D convolutions via TensorFlow with only one line of the custom Sequoia language. The library is currently under development and provides interpreter functionality, while in the next versions it will also provide pre-compiled intermediate forms in the sense of Just-In-Time compilation for much faster execution in the Sequoia engine. It is also a very useful educational tool for academic courses in compiler theory and advanced programming in Python.
+Description:<br/>
 
-Presented in:
-FOSSCOMM 2020 (virtual), 21-22 Nov. 2020 - https://2020.fosscomm.gr
+
+Example of console output:<br/>
+<pre>
+WSGI micro-service core, version 0.0.1 (build: 20211224)
+Harris Georgiou (c) 2021, Licence: CC-BY-NC-SA/4.0i 
+
+CPU type: AMD64 / CPU count: 4 / CPU class: Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+OS platform: 64bit-NT-WindowsPE / OS version: Windows-8.1-6.3.9600-SP0
+Python version: 3.10.1 (CPython) / Python build: MSC v.1929 64 bit (AMD64)
+SQLite3 version: 2.6.0 (Python) / 3.35.5 (engine) 
+
+configuration:  cfg/settings.cfg
+logging file:  log/error.log (level=DEBUG)
+IP allowed list:  ['127.0.0.1']
+Server listening at port 15387
+
+Serving at port 15387...
+-> Request(2): command='VER' , content='someone'
+-> Request served in 0.0  msec
+-> Request(1): command='ECHO' , content='someone'
+-> Request served in 0.0  msec
+-> Request(3): command='HELLO' , content='someone'
+-> Request served in 0.0  msec
+Client dropped (invalid request command)
+-> Request(4): command='QUIT' , content='someone'
+-> Request served in 0.0  msec
+
+Shutting down (QUIT command)...
+</pre>
