@@ -73,3 +73,5 @@ DPMIapi: memory information descriptor
 	         0 (bytes) : Minimum allocation unit
 	         0 (bytes) : Allocation alignment unit 
 </pre>
+
+<p>Note: No explicit UMB functionality is implemented in this library. For better performance and cleaner code in such DOS programs, it is recommended that XMS is configured to handle all the available memory (no EMS) and every available option is used for loading DOS and any RAM disk in XMS and UMB, thus leaving the maximum available amount of conventional memory free for user programs. Thus, the user code should only bother handling memory blocks to and from the XMS pool. See DOS version and 'HIMEM.SYS' documentations for details.</p>
