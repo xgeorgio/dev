@@ -2,6 +2,8 @@ Title:<br/>
 <b>DOSmemX: Extended memory functionality and DPMI server checker for DOS/x86 machines</b>
 
 Description:<br/>
+<p>By the beginning of the '90 the personal computers started to have more than the conventional 640 KB of RAM available for user programs. However, DOS did not have native support for memory address space above the first 1024 KB. Moreover, the memory addressing used a segmented 16-bit pair of pointers, making it even more complex to add support e.g. for 4 MB or 8 MB of RAM, which was becoming a norm even for home computers. Native support in DOS-compatible machine emerged only after Microsoft Windows NT and XP came to life.</p>
+<p>some text</p>
 
 Example output from XMSTEST (tested in DOSbox 0.74):
 <pre>
