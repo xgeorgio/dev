@@ -71,5 +71,5 @@ DPMIapi: memory information descriptor
 	         0 : Maximum linear address for this client
 	         0 (bytes) : Maximum free block size
 	         0 (bytes) : Minimum allocation unit
-	         0 (bytes) : Allocation alignment unit
+	         0 (bytes) : Allocation alignment unit 
 </pre>
