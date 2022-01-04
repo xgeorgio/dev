@@ -7,17 +7,19 @@ Description:<br/>
 <p>So, why bother programming an interface for such old machines? The answer is, because they still exist. DOS machines may be a relic of the past, but with software emulators we can develop code for such small platforms that can be used as single-task dedicated controllers, much like the Single-Board Computers (SBC) that exist today. There are extremely easy ways in DOS to handle external I/O such as serial comms port, a mouse, a keyboard, a printer port, even the speaker pins on the motherboards, and everything can be turned to General-Purpose I/O (GPIO) with only few lines of code. At the same time, in order to make something trully useful, memory much larger than 640 KB is usually needed, either for installing a RAM disk in XMS/EMS via device driver for fast file I/O, or directly interacting with XMS/EMS via code for memory allocation above 1024 KB. Between the two main options, XMS is definitely the easier to program, since it requires only memory management in blocks which can be easily swapped to and from heap buffers in the conventional memory area.</p>
 <p>In this small library, all the main XMS and UMB functionality is wrapped in proper C-style functions that can be used in any program with a DOS compiler, e.g. Borland's Turbo C++ or similar. <br/>
 The functions included are the following (see comments in 'XMS.H' for details):</p>
-* unsigned char xms_check( void )
-* XMScallback xms_get_callback( void )
-* void xms_query_info( void )
-* void xms_query_avail( void )
-* unsigned char xms_init( void )
-* void xms_print_info( void )
-* XMShandle xms_mem_alloc( unsigned int blocksize )
-* unsigned char xms_mem_free( XMShandle handle )
-* unsigned char xms_print_handleinfo( XMShandle handle )
-* unsigned char xms_mem_store( void far *src, XMShandle dest, unsigned long sz )
-* unsigned char xms_mem_fetch( XMShandle src, void far *dest, unsigned long sz )
+<ul>
+	<li>unsigned char xms_check( void )</li>
+	<li>XMScallback xms_get_callback( void )</li>
+	<li>void xms_query_info( void )</li>
+	<li>void xms_query_avail( void )</li>
+	<li>unsigned char xms_init( void )</li>
+	<li>void xms_print_info( void )</li>
+	<li>XMShandle xms_mem_alloc( unsigned int blocksize )</li>
+	<li>unsigned char xms_mem_free( XMShandle handle )</li>
+	<li>unsigned char xms_print_handleinfo( XMShandle handle )</li>
+	<li>unsigned char xms_mem_store( void far *src, XMShandle dest, unsigned long sz )<li>
+	<li>unsigned char xms_mem_fetch( XMShandle src, void far *dest, unsigned long sz )<li>
+</ul>
 
 <p>The XMS functionality can be verified with 'XMSTEST.EXE' (e.g. in DOSbox with XMS enabled), which demonstrates XMS memory block fetching.<br/>
 Example output from XMSTEST (tested in DOSbox 0.74):</p>
