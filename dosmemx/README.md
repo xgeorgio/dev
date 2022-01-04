@@ -17,8 +17,8 @@ The functions included are the following (see comments in 'XMS.H' for details):<
 	<li>XMShandle xms_mem_alloc( unsigned int blocksize )</li>
 	<li>unsigned char xms_mem_free( XMShandle handle )</li>
 	<li>unsigned char xms_print_handleinfo( XMShandle handle )</li>
-	<li>unsigned char xms_mem_store( void far \*src, XMShandle dest, unsigned long sz )<li>
-	<li>unsigned char xms_mem_fetch( XMShandle src, void far \*dest, unsigned long sz )<li>
+	<li>unsigned char xms_mem_store( void far &#8727;src, XMShandle dest, unsigned long sz )<li>
+	<li>unsigned char xms_mem_fetch( XMShandle src, void far &#8727;dest, unsigned long sz )<li>
 </ul>
 
 <p>The XMS functionality can be verified with 'XMSTEST.EXE' (e.g. in DOSbox with XMS enabled), which demonstrates XMS memory block fetching.<br/>
