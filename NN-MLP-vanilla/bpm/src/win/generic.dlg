@@ -1,0 +1,33 @@
+/*
+  +----------------------------------+
+  |                                  |
+  |   BPM - BackProp ANN Trainer     |
+  |   --------------------------     |
+  |                                  |
+  |    Harris Georgiou (c) 2000      |
+  |                                  |
+  +----------------------------------+
+*/
+
+//................................................
+
+/*************************************************************\
+* generic.dlg: Dialogs for Generic                            *
+*                                                             *
+*                                                             *
+\*************************************************************/
+
+1 DLGINCLUDE "generic.h"
+
+AboutDlg DIALOG FIXED 6, 21, 188, 99
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "&OK", IDOK, 72, 74, 40, 14
+    LTEXT           "BPM - BackProp ANN Trainer", 104, 45, 14, 128, 8
+    LTEXT           "Version 4.2", 105, 45, 35, 59, 8
+    LTEXT           "Harris Georgiou", 106, 45, 45, 98, 8
+    LTEXT           "Copyright (c) 2000.", 107, 45, 54, 138, 8
+END
+

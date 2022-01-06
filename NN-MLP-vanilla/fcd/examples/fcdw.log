@@ -1,0 +1,280 @@
+FCD - Feature Classifier Design 2.2 (Build: R000717-Win32-PPro)
+
+
+Optimizing feature selection...
+Sorted feature selection:
+feature 20 -> tval=7.9799	-> +[Selected]
+feature 19 -> tval=6.5360	-> +[Selected]
+feature 09 -> tval=5.2311	-> +[Selected]
+feature 16 -> tval=4.7401	-> +[Selected]
+feature 13 -> tval=4.4928	-> +[Selected]
+feature 17 -> tval=4.4816	-> +[Selected]
+feature 15 -> tval=4.4532	-> +[Selected]
+feature 05 -> tval=4.3694	-> +[Selected]
+feature 12 -> tval=3.3876	-> +[Selected]
+feature 06 -> tval=2.2886	->  [Rejected]
+feature 07 -> tval=2.0532	->  [Rejected]
+feature 04 -> tval=1.7449	->  [Rejected]
+feature 03 -> tval=1.2254	->  [Rejected]
+feature 10 -> tval=1.1633	->  [Rejected]
+feature 01 -> tval=1.1352	->  [Rejected]
+feature 02 -> tval=0.8558	->  [Rejected]
+feature 14 -> tval=0.5078	->  [Rejected]
+feature 18 -> tval=0.4213	->  [Rejected]
+feature 11 -> tval=0.4084	->  [Rejected]
+feature 08 -> tval=0.3953	->  [Rejected]
+T-Test Results:  selected 9 out of 20 features (limit=2.332)
+Selected feature set: [9]: 0 0 0 0 1 0 0 0 1 0 0 1 1 0 1 1 1 0 1 1 
+Writing AUX-1 data file...
+Allocated space for 246 feature combinations
+Optimizing MDC configuration...
+Current optimum MDC (config=1): Correct =  66.267
+Current optimum MDC (config=2): Correct =  66.267
+Current optimum MDC (config=3): Correct =  66.667
+Current optimum MDC (config=4): Correct =  66.667
+Current optimum MDC (config=5): Correct =  66.667
+Current optimum MDC (config=6): Correct =  66.667
+Current optimum MDC (config=7): Correct =  66.667
+Current optimum MDC (config=8): Correct =  67.333
+Current optimum MDC (config=9): Correct =  67.333
+Current optimum MDC (config=10): Correct =  67.333
+Current optimum MDC (config=11): Correct =  67.333
+Current optimum MDC (config=12): Correct =  67.333
+Current optimum MDC (config=13): Correct =  67.333
+Current optimum MDC (config=14): Correct =  67.333
+Current optimum MDC (config=15): Correct =  67.333
+Current optimum MDC (config=16): Correct =  67.333
+Current optimum MDC (config=17): Correct =  67.333
+Current optimum MDC (config=18): Correct =  67.333
+Current optimum MDC (config=19): Correct =  67.333
+Current optimum MDC (config=20): Correct =  67.333
+Current optimum MDC (config=21): Correct =  67.333
+Current optimum MDC (config=22): Correct =  67.333
+Current optimum MDC (config=23): Correct =  67.333
+Current optimum MDC (config=24): Correct =  67.333
+Current optimum MDC (config=25): Correct =  67.333
+Current optimum MDC (config=26): Correct =  67.333
+Current optimum MDC (config=27): Correct =  67.333
+Current optimum MDC (config=28): Correct =  67.333
+Current optimum MDC (config=29): Correct =  67.333
+Current optimum MDC (config=30): Correct =  67.333
+Current optimum MDC (config=31): Correct =  67.333
+Current optimum MDC (config=32): Correct =  67.333
+Current optimum MDC (config=33): Correct =  67.600
+Current optimum MDC (config=34): Correct =  67.600
+Current optimum MDC (config=35): Correct =  67.600
+Current optimum MDC (config=36): Correct =  67.600
+Current optimum MDC (config=37): Correct =  67.600
+Current optimum MDC (config=38): Correct =  67.600
+Current optimum MDC (config=39): Correct =  67.600
+Current optimum MDC (config=40): Correct =  67.600
+Current optimum MDC (config=41): Correct =  67.600
+Current optimum MDC (config=42): Correct =  67.600
+Current optimum MDC (config=43): Correct =  67.600
+Current optimum MDC (config=44): Correct =  67.600
+Current optimum MDC (config=45): Correct =  67.600
+Current optimum MDC (config=46): Correct =  67.600
+Current optimum MDC (config=47): Correct =  67.600
+Current optimum MDC (config=48): Correct =  67.600
+Current optimum MDC (config=49): Correct =  67.600
+Current optimum MDC (config=50): Correct =  67.600
+Current optimum MDC (config=51): Correct =  67.600
+Current optimum MDC (config=52): Correct =  67.600
+Current optimum MDC (config=53): Correct =  67.600
+Current optimum MDC (config=54): Correct =  67.600
+Current optimum MDC (config=55): Correct =  67.600
+Current optimum MDC (config=56): Correct =  67.600
+Current optimum MDC (config=57): Correct =  67.600
+Current optimum MDC (config=58): Correct =  67.600
+Current optimum MDC (config=59): Correct =  67.600
+Current optimum MDC (config=60): Correct =  67.600
+Current optimum MDC (config=61): Correct =  67.600
+Current optimum MDC (config=62): Correct =  67.600
+Current optimum MDC (config=63): Correct =  67.600
+Current optimum MDC (config=64): Correct =  67.600
+Current optimum MDC (config=65): Correct =  67.600
+Current optimum MDC (config=66): Correct =  67.600
+Current optimum MDC (config=67): Correct =  67.600
+Current optimum MDC (config=68): Correct =  67.600
+Current optimum MDC (config=69): Correct =  67.600
+Current optimum MDC (config=70): Correct =  67.600
+Current optimum MDC (config=71): Correct =  67.600
+Current optimum MDC (config=72): Correct =  67.600
+Current optimum MDC (config=73): Correct =  67.600
+Current optimum MDC (config=74): Correct =  67.600
+Current optimum MDC (config=75): Correct =  67.600
+Current optimum MDC (config=76): Correct =  67.600
+Current optimum MDC (config=77): Correct =  67.600
+Current optimum MDC (config=78): Correct =  67.600
+Current optimum MDC (config=79): Correct =  67.600
+Current optimum MDC (config=80): Correct =  67.600
+Current optimum MDC (config=81): Correct =  67.600
+Current optimum MDC (config=82): Correct =  67.600
+Current optimum MDC (config=83): Correct =  67.600
+Current optimum MDC (config=84): Correct =  67.600
+Current optimum MDC (config=85): Correct =  67.600
+Current optimum MDC (config=86): Correct =  67.600
+Current optimum MDC (config=87): Correct =  67.600
+Current optimum MDC (config=88): Correct =  67.600
+Current optimum MDC (config=89): Correct =  67.600
+Current optimum MDC (config=90): Correct =  67.600
+Current optimum MDC (config=91): Correct =  67.600
+Current optimum MDC (config=92): Correct =  67.600
+Current optimum MDC (config=93): Correct =  67.600
+Current optimum MDC (config=94): Correct =  67.600
+Current optimum MDC (config=95): Correct =  67.600
+Current optimum MDC (config=96): Correct =  67.600
+Current optimum MDC (config=97): Correct =  67.600
+Current optimum MDC (config=98): Correct =  67.600
+Current optimum MDC (config=99): Correct =  67.600
+Current optimum MDC (config=100): Correct =  67.600
+Current optimum MDC (config=101): Correct =  67.600
+Current optimum MDC (config=102): Correct =  67.600
+Current optimum MDC (config=103): Correct =  67.600
+Current optimum MDC (config=104): Correct =  67.600
+Current optimum MDC (config=105): Correct =  67.600
+Current optimum MDC (config=106): Correct =  67.600
+Current optimum MDC (config=107): Correct =  67.600
+Current optimum MDC (config=108): Correct =  67.600
+Current optimum MDC (config=109): Correct =  67.600
+Current optimum MDC (config=110): Correct =  67.600
+Current optimum MDC (config=111): Correct =  67.600
+Current optimum MDC (config=112): Correct =  67.600
+Current optimum MDC (config=113): Correct =  67.600
+Current optimum MDC (config=114): Correct =  67.600
+Current optimum MDC (config=115): Correct =  67.600
+Current optimum MDC (config=116): Correct =  67.600
+Current optimum MDC (config=117): Correct =  67.600
+Current optimum MDC (config=118): Correct =  67.600
+Current optimum MDC (config=119): Correct =  67.600
+Current optimum MDC (config=120): Correct =  67.600
+Current optimum MDC (config=121): Correct =  67.600
+Current optimum MDC (config=122): Correct =  67.600
+Current optimum MDC (config=123): Correct =  67.600
+Current optimum MDC (config=124): Correct =  67.600
+Current optimum MDC (config=125): Correct =  67.600
+Current optimum MDC (config=126): Correct =  67.600
+Current optimum MDC (config=127): Correct =  67.600
+Current optimum MDC (config=128): Correct =  67.600
+Current optimum MDC (config=129): Correct =  67.600
+Current optimum MDC (config=130): Correct =  67.600
+Current optimum MDC (config=131): Correct =  67.600
+Current optimum MDC (config=132): Correct =  67.600
+Current optimum MDC (config=133): Correct =  67.600
+Current optimum MDC (config=134): Correct =  67.600
+Current optimum MDC (config=135): Correct =  67.600
+Current optimum MDC (config=136): Correct =  67.600
+Current optimum MDC (config=137): Correct =  67.600
+Current optimum MDC (config=138): Correct =  67.600
+Current optimum MDC (config=139): Correct =  67.600
+Current optimum MDC (config=140): Correct =  67.600
+Current optimum MDC (config=141): Correct =  67.600
+Current optimum MDC (config=142): Correct =  67.600
+Current optimum MDC (config=143): Correct =  67.600
+Current optimum MDC (config=144): Correct =  67.600
+Current optimum MDC (config=145): Correct =  67.600
+Current optimum MDC (config=146): Correct =  67.600
+Current optimum MDC (config=147): Correct =  67.600
+Current optimum MDC (config=148): Correct =  67.600
+Current optimum MDC (config=149): Correct =  67.600
+Current optimum MDC (config=150): Correct =  67.600
+Current optimum MDC (config=151): Correct =  67.600
+Current optimum MDC (config=152): Correct =  67.600
+Current optimum MDC (config=153): Correct =  67.600
+Current optimum MDC (config=154): Correct =  67.600
+Current optimum MDC (config=155): Correct =  67.600
+Current optimum MDC (config=156): Correct =  67.600
+Current optimum MDC (config=157): Correct =  67.600
+Current optimum MDC (config=158): Correct =  67.600
+Current optimum MDC (config=159): Correct =  67.600
+Current optimum MDC (config=160): Correct =  67.600
+Current optimum MDC (config=161): Correct =  67.600
+Current optimum MDC (config=162): Correct =  67.600
+Current optimum MDC (config=163): Correct =  67.600
+Current optimum MDC (config=164): Correct =  67.600
+Current optimum MDC (config=165): Correct =  67.600
+Current optimum MDC (config=166): Correct =  67.600
+Current optimum MDC (config=167): Correct =  67.600
+Current optimum MDC (config=168): Correct =  67.600
+Current optimum MDC (config=169): Correct =  67.600
+Current optimum MDC (config=170): Correct =  67.600
+Current optimum MDC (config=171): Correct =  67.600
+Current optimum MDC (config=172): Correct =  67.600
+Current optimum MDC (config=173): Correct =  67.600
+Current optimum MDC (config=174): Correct =  67.600
+Current optimum MDC (config=175): Correct =  67.600
+Current optimum MDC (config=176): Correct =  67.600
+Current optimum MDC (config=177): Correct =  67.600
+Current optimum MDC (config=178): Correct =  67.600
+Current optimum MDC (config=179): Correct =  67.600
+Current optimum MDC (config=180): Correct =  67.600
+Current optimum MDC (config=181): Correct =  67.600
+Current optimum MDC (config=182): Correct =  67.600
+Current optimum MDC (config=183): Correct =  67.600
+Current optimum MDC (config=184): Correct =  67.600
+Current optimum MDC (config=185): Correct =  67.600
+Current optimum MDC (config=186): Correct =  67.600
+Current optimum MDC (config=187): Correct =  67.600
+Current optimum MDC (config=188): Correct =  67.600
+Current optimum MDC (config=189): Correct =  67.600
+Current optimum MDC (config=190): Correct =  67.600
+Current optimum MDC (config=191): Correct =  67.600
+Current optimum MDC (config=192): Correct =  67.600
+Current optimum MDC (config=193): Correct =  67.600
+Current optimum MDC (config=194): Correct =  67.600
+Current optimum MDC (config=195): Correct =  67.600
+Current optimum MDC (config=196): Correct =  67.600
+Current optimum MDC (config=197): Correct =  67.600
+Current optimum MDC (config=198): Correct =  67.600
+Current optimum MDC (config=199): Correct =  67.600
+Current optimum MDC (config=200): Correct =  67.600
+Current optimum MDC (config=201): Correct =  67.600
+Current optimum MDC (config=202): Correct =  67.600
+Current optimum MDC (config=203): Correct =  67.600
+Current optimum MDC (config=204): Correct =  67.600
+Current optimum MDC (config=205): Correct =  67.600
+Current optimum MDC (config=206): Correct =  67.600
+Current optimum MDC (config=207): Correct =  67.600
+Current optimum MDC (config=208): Correct =  67.600
+Current optimum MDC (config=209): Correct =  67.600
+Current optimum MDC (config=210): Correct =  67.600
+Current optimum MDC (config=211): Correct =  67.600
+Current optimum MDC (config=212): Correct =  67.600
+Current optimum MDC (config=213): Correct =  67.600
+Current optimum MDC (config=214): Correct =  67.600
+Current optimum MDC (config=215): Correct =  67.600
+Current optimum MDC (config=216): Correct =  67.600
+Current optimum MDC (config=217): Correct =  67.600
+Current optimum MDC (config=218): Correct =  67.600
+Current optimum MDC (config=219): Correct =  67.600
+Current optimum MDC (config=220): Correct =  67.600
+Current optimum MDC (config=221): Correct =  67.600
+Current optimum MDC (config=222): Correct =  67.600
+Current optimum MDC (config=223): Correct =  67.600
+Current optimum MDC (config=224): Correct =  67.600
+Current optimum MDC (config=225): Correct =  67.600
+Current optimum MDC (config=226): Correct =  67.600
+Current optimum MDC (config=227): Correct =  67.600
+Current optimum MDC (config=228): Correct =  67.600
+Current optimum MDC (config=229): Correct =  67.600
+Current optimum MDC (config=230): Correct =  67.600
+Current optimum MDC (config=231): Correct =  67.600
+Current optimum MDC (config=232): Correct =  67.600
+Current optimum MDC (config=233): Correct =  67.600
+Current optimum MDC (config=234): Correct =  67.600
+Current optimum MDC (config=235): Correct =  67.600
+Current optimum MDC (config=236): Correct =  67.600
+Current optimum MDC (config=237): Correct =  67.600
+Current optimum MDC (config=238): Correct =  67.600
+Current optimum MDC (config=239): Correct =  67.600
+Current optimum MDC (config=240): Correct =  67.600
+Current optimum MDC (config=241): Correct =  67.600
+Current optimum MDC (config=242): Correct =  67.600
+Current optimum MDC (config=243): Correct =  67.600
+Current optimum MDC (config=244): Correct =  67.600
+Current optimum MDC (config=245): Correct =  67.600
+Current optimum MDC (config=246): Correct =  67.600
+Finished: Optimum MDC (config=33): Correct =  67.600
+Writing optimum MDC configuration to file
+Writing AUX-2 data file
+Process terminated normally.

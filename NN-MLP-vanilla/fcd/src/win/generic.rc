@@ -1,0 +1,35 @@
+//-------------------------------------------------
+//  
+//   File: Feature Classifier Design, v1.0
+//
+//-------------------------------------------------
+//               Harris Georgiou, 2000.
+//-------------------------------------------------
+
+/*************************************************************\
+* generic.rc: Resource script for Generic                     *
+*                                                             *
+*                                                             *
+\*************************************************************/
+
+#include <windows.h>
+#include "generic.h"
+#include "generic.dlg"
+
+GenericAppMenu MENU
+{
+   POPUP "&File"
+   {
+      MENUITEM "&Open",         IDM_OPEN
+      MENUITEM "E&xit",         IDM_EXIT
+   }
+   POPUP "&Process"
+   {
+      MENUITEM "&Start",         IDM_START
+   }
+   POPUP "&Help"
+   {
+      MENUITEM "&About",         IDM_ABOUT
+   }
+}
+
