@@ -2,21 +2,8 @@ Title:<br/>
 <b>NN-Kohonen: Neural Networks - Kohonen model in 'vanilla' C/C++</b>
 
 Description:<br/>
-<p>This package implements the basic Kohonen ANN model. It contains
-	  all source code to define the structures and functionality of such
-	  ANN. It also contains some tools to test the behaviour of the 
-	  constructed networks.</p>
-
-      <p>The program can be used to implement any Kohonen network, with
-	  one "dummy" input layer, one neuron grid (X*Y neurons) and a
-	  "dummy" output grid to carry out values from the "hidden" neuron 
-	  grid. Parameters define the grid size, training coefficients and
-	  cycles. During training there is an "ETA" displayed value to show
-	  the estimated time remaining to complete training, together with
-	  some other training parameters as they change throughout the
-	  process. Network status (weight values) are periodically dumped
-	  into an output file, used to determine the network throughput
-	  after the training has completed.</p>
+<p>This package implements the basic Kohonen ANN model. It contains all source code to define the structures and functionality of such ANN. It also contains some tools to test the behaviour of the constructed networks.</p>
+<p>The program can be used to implement any Kohonen network, with one "dummy" input layer, one neuron grid (X*Y neurons) and a "dummy" output grid to carry out values from the "hidden" neuron grid. Parameters define the grid size, training coefficients and cycles. During training there is an "ETA" displayed value to show the estimated time remaining to complete training, together with some other training parameters as they change throughout the process. Network status (weight values) are periodically dumped into an output file, used to determine the network throughput after the training has completed.</p>
 
 	  <p>The initial values for weights can be random or normalized. The
 	  success of the training and the quality of the final network is
