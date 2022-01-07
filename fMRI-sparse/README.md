@@ -10,7 +10,7 @@ Description:<br/>
 <p>Here is a list of the main features currently included in the toolbox:</p>
 <p><strong>fMRI data series manipulation:</strong></p>
 <ul>
-<li><u>vxVectorize / vxDevectorize</u> : A fMRI data series typically contains a 3-D grid of several 2-D 'slices' of brain fMRI 'images', registered along a 4th dimension of time (temporal evolution). However, most decomposition and analysis algorithms require standard 2-D matrices. These two functions convert a 3-D (slice-based) or 4-D (grid-based) fMRI data series into a standard 'flattened' matrix and vice versa. These are compatible with Matlab's standard 'reshape' function, but they keep the row-wise axis for time and column-wise axis for voxels (while 'reshape' works differently).</li>
+<li><span style="text-decoration: underline;"><span style="font-family: courier new,courier;">vxVectorize / vxDevectorize</span></span> : A fMRI data series typically contains a 3-D grid of several 2-D 'slices' of brain fMRI 'images', registered along a 4th dimension of time (temporal evolution). However, most decomposition and analysis algorithms require standard 2-D matrices. These two functions convert a 3-D (slice-based) or 4-D (grid-based) fMRI data series into a standard 'flattened' matrix and vice versa. These are compatible with Matlab's standard 'reshape' function, but they keep the row-wise axis for time and column-wise axis for voxels (while 'reshape' works differently).</li>
 </ul>
 <p><strong>fMRI voxel dependencies:</strong></p>
 <ul>
