@@ -1,5 +1,5 @@
 Title:<br/>
-<b>NN-MLP-vanilla: Neural Network Multi-Layer Perceptron programs suite in 'vanilla' C/C++</b>
+<b>fMRI-Sparse toolbox: Dictionary learning sparse decomposition for fMRI imaging in Matlab/Octave</b>
 
 Description:<br/>
 <p><strong>fMRI-Sparse toolbox</strong> is a minimalistic collection of low-level data handling (matrix) functions for fMRI processing, block-based &amp; event-based test pattern series, as well as "realistic" simulated fMRI data series for algorithm benchmarking, template scripts for various fMRI decomposition methods (GLM, PCA, ICA, BP, CCA, KSVD), analysis of components &amp; activation maps, etc. Since the toolbox can be used as a benchmarking suite, several data generators are included for creating fully-identifiable fMRI-like data series.</p>
@@ -68,4 +68,11 @@ Description:<br/>
 <li><a target="_blank" href="https://openfmri.org/data-sets">Openfmri.org</a> : One of the most comprehensive and well-documented collection of fMRI datasets, freely available for download, in <a target="_blank" href="http://nifti.nimh.nih.gov/nifti-1/">NIFTI format</a>.</li>
 </ul>
 <p>&nbsp;</p>
+<p><strong>Publications</strong></p>
+<p>The fMRI Sparse toolbox has been developed during the ASSURANCE project (GSRT, Greece) and used in the experimental work of a relevant paper published in ICASSP 2014:</p>
+<ul>
+  <li><i>fMRI Unmixing Via Properly Adjusted Dictionary Learning</i> (2014). Y. Kopsinis, H. Georgiou, S. Theodoridis<br/>
+    22nd European Signal Processing Conference (EUSIPCO 2014), 1-5 Sept 2014 @ Lisbon, Portugal.</li>
+</ul>
+
 
