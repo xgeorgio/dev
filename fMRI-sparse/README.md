@@ -1,5 +1,5 @@
 Title:<br/>
-<b>fMRI-Sparse toolbox: Dictionary learning sparse decomposition for fMRI imaging in Matlab/Octave</b>
+<b>fMRI-Sparse toolbox: Dictionary learning sparse decomposition for fMRI imaging in Matlab/Octave.</b>
 
 Description:<br/>
 <p>fMRI-Sparse toolbox is a minimalistic collection of low-level data handling (matrix) functions for fMRI processing, block-based &amp; event-based test pattern series, as well as "realistic" simulated fMRI data series for algorithm benchmarking, template scripts for various fMRI decomposition methods (GLM, PCA, ICA, BP, CCA, KSVD), analysis of components &amp; activation maps, etc. Since the toolbox can be used as a benchmarking suite, several data generators are included for creating fully-identifiable fMRI-like data series.</p>
