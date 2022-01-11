@@ -1,0 +1,203 @@
+<HTML>
+
+<HEAD>
+    <TITLE>Pegasus Quick Tour On-line Manual</TITLE>
+</HEAD>
+
+<BODY BGCOLOR=#006060 TEXT=#ffffff LINK=#70c0ff VLINK=#ff00ff ALINK=#ffffff>
+
+<H2><B><IMG SRC="plogo_s.gif" ALT="Pegasus" HSPACE=5> Quick Tour</B></H2>
+
+<HR SIZE=5>
+<A NAME="GENERAL">
+<BR><H1><B><CENTER>General Description</CENTER></B></H1><BR>
+The Pegasys service in its present form is the result of academic projects
+and research work on the fields of protein prediction, artificial neural networks,
+on-line distributed Web systems and Java technology.
+<P>
+The early versions of the system were developed at the <A HREF="http://www.uoi.gr">University of 
+Ioannina</A> , in the <A HREF="http://www.cs.uoi.gr">Department of Computer 
+Science</A>. The most recent versions, including this one, were released as a
+publicly available software package, available as a distributed client/server
+application, using Java applet technologies and dynamic loading-execution
+to make it accessible through any Java-enabled Web browser.
+<P>
+Its purpose is to help molecular biologists and genetic engineers to identify 
+the most "suitable" class (one of the 48) of a protein sequence, by calculating 
+the base correlation frequencies and analyzing them through a specially trained 
+neural network.<P>
+The hole system is implemented purely in Java programming language (Java API 1.1.4).
+It contains the client program (Pegasus client), in the form of
+a Java applet, and the prediction system (Pegasus server), including the network server,
+the ANN prediction system and the internal mailing support services. Every user
+can access the WWW client page and activate the (latest version of the) client
+program. No need of pre-installed components, no need for installation updates.
+<P>
+
+
+<HR>
+<A NAME="GUIDE">
+<BR><H1><B><CENTER>User's Guide</CENTER></B></H1><BR>
+<BR><H2>Pegasus Client Program</H2>
+The Pegasus client program is implemented as a Java applet. It contains a very 
+friendly and easy-to-use user interface that is suitable for any user level. It 
+provides all the necessary means to create an analysis request, send the request 
+to the analysis server, monitor the network traffic and the analysis process, 
+and finally get the results. All these capabilities are implemented in three 
+forms, each one representing a process stage: input, process, output. 
+<P>
+
+<H3><B><I>Input stage</I></B></H3>
+<P>
+The input form contains a set of fields, used to identify a user, an analysis 
+type selector and a textbox used to type-in the sequence data. Although the user 
+authentication fields are quite a few, only the "E-mail" field is required for a 
+valid analysis request. These fields are used only to provide some statistics 
+about the traffic and the users accessing the server. The "User-ID" field is 
+intended to be used in future versions, to provide some priority privileges on 
+server to "registered" users, against any-user. This does NOT mean that only 
+registered users can use the server, this was never the intention. Anyway, the 
+program is at the evaluation stage for the time, so all users are "equal" to the 
+server.
+<P>
+The field "Process type" field can be used to determine the processing mode.
+The user can interactively access the system, sending the request and waiting for the
+results. Alternatively, the batch mode processing is used to "post" the request to the
+server and disconnecting, receiving the results at a later time via e-mail. This type
+of processing is convinient for long-time processing sessions, or just to get a compact
+form of the result data. The third option combines the two previous options, that is using
+interactive sessions and receiving the result data via e-mail at the same time.
+<P>
+The "Sequence data" field is the textbox in which the 
+user types-in the sequence. No special format is used, valid is any string 
+containing protein bases (character symbols, lowercase or uppercase) in 
+sequence, formated in any way using multiple lines of text, blank spaces, tab characters
+or index numbers.
+<P>
+The analysis can be made in the whole sequence or in seperate "windows" of subsequencies,
+according to the nature of the problem and the prediction precision specifications. 
+In this case, the "Window size" field defines the subsequences (window) length and the
+"Threshold" fields define the upper and lower limits of certainty for the final results.
+<P>
+
+<H3><B><I>Process stage</I></B></H3>
+<P>
+After all necessary fields have been completed, the "Send" button creates a 
+request packet that is sent to the server. The client connects to server, the 
+form switches to "process" mode and shows two status lines that inform the user 
+about the current process stage and status. The user may press the "Cancel" 
+button at any time to abort the process. If an error has happened, the user may 
+press the "Retry" button to restart the connection.
+<P>
+
+<H3><B><I>Output stage</I></B></H3>
+<P>
+When analysis has completed, the server sends the results to the client. The 
+client switches to "output" mode and a form similar to the first one appears, 
+only now it is read-only. The new form is filled with fields explaining
+the various analysis parameters and results, according to the type and mode of
+the processing (total or windowed).
+<P>
+After the user has processed the results, the "Close"
+button switches the client (and form) to "input" mode, ready for a new analysis request.
+<P>
+
+<BR><H2>Pegasus Server Program</H2>
+The protein prediction program is a specially designed and trained neural 
+network, implemented pure Java. The server relays the sequence data the ANN prediction system,
+executing a separate prediction for each analysis window (and the whole sequence itself) in
+three different ANN network configurations. The final result for each sequence is calculated
+using a majority rule on the individual results and the total prediction for windowed analysis
+is calculated using a "maximum-category-frequence" factor in the windowed analysis result set.
+<P>
+Due to the security restrictions on Java applets, the server program is implemented as iterative,
+executing a single prediction at any time. Although the analysis process is quite complex, the
+efficient pure Java implementation and the iterative (single-user) type of processing makes the
+service capable of completing each request in just a few seconds. That is why, from an external
+point of view, the service reacts nearly like a simple UDP service, rather than a heavyweight
+session-oriented client queueing server (which, in fact, is the truth!).
+<P>
+
+
+<HR>
+<A NAME="TECHREF">
+<BR><H1><B><CENTER>Technical Reference</CENTER></B></H1><BR>
+The following list contains various technical informations and system specifications
+about the Pegasus programs:<P><BR>
+
+Pegasus Client (applet):
+<UL>
+<LI>Implemented: Sun's Java JDK version 1.1</LI>
+<LI>Tested with: Sun's Appletviewer (JDK v1.1), Netscape Navigator v3.0x,
+Netscape Communicator v4.0, Microsoft Internet Explorer v3.0 & v4.0</LI>
+<LI>Tested on: SUN-Sparc-station/4 & Sun-Sparc-station/IPX with SunOS/Solaris, 
+IBM-PC compatible with MS-Windows95, WindowsNT (3.0 & 4.0 workstation/server),
+Linux (RedHat 4.2), FreeBSD, OS/2 Warp.</LI>
+</UL>
+<P>
+Pegasus Server (and Remote Managers):
+<UL>
+<LI>Implemented: Sun's Java JDK version 1.1</LI>
+<LI>Tested with: Sun's Java JDK version 1.1, JRE version 1.0</LI>
+<LI>Tested on: SUN-Sparc-station/4 & Sun-Sparc-station/IPX with SunOS/Solaris, 
+IBM-PC compatible with MS-Windows95, WindowsNT (3.0 & 4.0 workstation/server),
+Linux (RedHat 4.2).</LI>
+</UL>
+<P>
+
+
+<HR>
+<A NAME="TEAM">
+<BR><H1><B><CENTER>Development Team</CENTER></B></H1><BR>
+Here are some details about the people who perceived and implemented the
+whole idea of an on-line protein prediction system for the World Wide Web,
+using the (currently available) technology and knowledge of ANN architectures
+and Java programming for distributed applications.
+<P>
+Please, feel free to contact any of them to send comments, suggestions, to request
+any information about the problem of protein prediction problem or the application
+itself, and (of course) to report any bugs! You can help us improve this service.
+<P>
+
+<DL>
+    <DT><A HREF="mailto:grad0177@di.uoa.gr">Harris Georgiou</A></DT>
+        <DD>Lead Pegasus package programmer and exclusive Java developer. Started
+            with earlier versions of the system ("Darwin","Flamingo","Tomcat") as major
+            part of the graduate project, at the University of Ioannina, Department
+            of Computer Science, during 1996-1997. Curently on post-graduate course
+            studies at the Univarsity of Athens, Department of Informatics, in the
+            field of Signal Processing & Computer Systems.<BR>Detailed biographic info at
+            <A HREF="http://www.di.uoa.gr/~grad0177">http://www.di.uoa.gr/~grad0177</A><BR></DD>
+    <DT><A HREF="mailto:dakarras@cs.uoi.gr">Dimitris Karras</A></DT>
+        <DD>Chief project coordinator, advisor professor (graduate project, University of Ioannina, Department
+            of Computer Science, during 1996-1997) and research leader in the field
+            of protein prediction using artificial neural networks. Developer of the original
+            neural training & evaluating package ("Neural") for ANN protein prediction,
+            programmed exclusively in ANSI C for Unix systems. The earlier versions of the system
+            ("Darwin","Flamingo","Tomcat") were using this package as an external predictor, but the
+            current system (Pegasus) implements the same ANNs as an internal server service.</DD>
+</DL>
+
+
+
+
+<HR>
+<TABLE>
+<TR><TD><A HREF="home.html"><IMG SRC="prev.gif" ALT="[prev]" BORDER=0></A></TD>
+<TD><A HREF="home.html"><H3><B>Back to main page</B></H3></A></TD></TR>
+</TABLE>
+<HR SIZE=5>
+<TABLE>
+<TR><TD><A HREF="mailto:grad0177@di.uoa.gr"><IMG SRC="mail1.gif" ALT="[mail us]" HSPACE=5 BORDER=0></A></TD>
+<TD>
+Copyright (c) 1998, Harris Georgiou.<BR>
+Last updated: 01-Oct-98<BR>
+For any problems, comments or update info, please contact the 
+<A HREF="mailto:grad0177@di.uoa.gr">Pegasus Programming Team</A></TD></TR>
+</TABLE>
+
+</BODY>
+
+</HTML>
+
+

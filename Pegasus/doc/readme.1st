@@ -1,0 +1,87 @@
++-------------------------------------------------------------+
+|     PEGASUS - Java-based Protein Prediction Web service     |
+|        version 2.0 (R981004), for JRE 1.1.4 or later        |
++-------------------------------------------------------------+
+
+
+Document last update:  4-Oct-98.
+
+
+This is a short installation reference for users who wish to setup the
+complete Pegasus package (client, server, remote manager). The system
+should provide an active network connection. The server node should
+also provide a local Web server and a JRE-compatible package, while
+the remote managing node only a JRE-compatible package. The client Web
+browser should support Java applets. The following instructions is a
+summary of the parameter modifications needed for the proper setup and
+deployment of the Pegasus package.
+
+
+INSTALLATION INSTRUCTIONS
+=========================
+
+After decompressing the package in the application directory, some
+configuration parameters should be defined by the administrator.
+These include the client, server and remote managing programs, each
+contained in a separate directory.
+
+
+Pegasus Client Setup
+--------------------
+
+The Pegasus client consists of all the files contained in the "PClient"
+directory. That is the Java .class binaries, the Web access pages and
+the miscellaneous images and data files. The main Web page is
+automatically set to "index.html", so the only thing to do is to make
+the "PClient" directory and its files accessible (executable, read-only)
+to the whole world. The Pegasus client can be accessed via a normal http
+address: "http://...../.../PClient/index.html". Note that the "PORT"
+parameter in "LoadClient.html" file should be consistent with the port
+number that used by the server.
+
+
+Pegasus Server Setup
+--------------------
+
+There are three configuration files needed for the entire server package:
+   - the main server configuration file (SvrMain.cfg)
+   - the Mailer configuration file (MailServer.cfg)
+   - the PPS server configuration file (PPServer.cfg)
+In the main server's CFG file, the administrator should define the policies
+regarding cache buffers, client queue and user database, along with the
+logging filename and status. The most important parameter is the port number.
+The mailer's CFG file contains information regarding the usage of external
+(shell) mailer scripts or the internal SMTP mailer. External mailing requires
+only the name of the mailing (shell) script, using current user and system
+mailing properties. The internal SMTP mailer requires the host address and
+port number (default is 25) of the network's SMTP server, along with a valid
+return address.
+The PPS server's CFG file contains detailed parameters about network activation
+scheme (default is for single-CPU systems), along with some internal server
+parameters (WDF filename, I/O buffer size, etc.). No special care should be
+needed setting up the PPS server, unless a different network activation scheme
+is required.
+The server can be executed as a background process via a system shell,
+issuing a command like this (UNIX): "java SvrMain &". It should be noted
+that a JRE package (Sun's JDK or JRE packages), with Java API 1.1.4 support,
+should be already installed on the system. For more information, contact
+Sun's Java site for available products (http://www.javasoft.com).
+
+
+Pegasus Remote Manager(s) Setup
+-------------------------------
+
+The remote manager package is contained in the "PManager" directory,
+including the main remote manager (PRManager) and its configuration file.
+PRManager can be executed both using command-line parameters or reading
+the defaults from the CFG file, which defines the current Pegasus server
+address and port number. The administrator can selectively disable the TTY
+interactive option to ensure the proper use of the program in shell scripts
+(exit with error).
+The remote manager can be executed via a system shell, issuing a command like
+this (UNIX): "java PRManager". The "-?" option shows the complete parameter
+list that can be used in command-line mode. It should be noted that a JRE
+package (Sun's JDK or JRE packages), with Java API 1.1.4 support, should be
+already installed on the system. For more information, contact Sun's Java
+site for available products (http://www.javasoft.com).
+
