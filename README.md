@@ -3,6 +3,7 @@ Development and production projects:
 <ul>
   <li>fMRI-Sparse toolbox: Dictionary learning sparse decomposition for fMRI imaging in Matlab/Octave.</li>
   <li>Matlab/Octave tools for signal processing and statistics.</li>
+  <li>Huffman tree coding library in C/C++.</li>  
   <li>NN-MLP-vanilla: Neural Network Multi-Layer Perceptron programs suite in 'vanilla' C/C++.</li>
   <li>NN-Kohonen: Neural Networks - Kohonen model in 'vanilla' C/C++.</li>
   <li>Pegasus: Java-based Protein Prediction Web service.</li>

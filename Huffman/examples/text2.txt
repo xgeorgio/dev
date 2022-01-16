@@ -1,0 +1,3 @@
+hello from c
+this is a test program
+bye now
