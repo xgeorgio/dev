@@ -9,7 +9,8 @@
     DESCRIPTION:    The main() implementation can be easily transformed into a lightweight
 	                string-based parser of key-value pairs with or without section labels.
 					Section labels should be enclosed on brackets '[' and ']', multi-value
-					keys should begin with asterisk '*' to flag multiple token parsing.
+					keys should begin with asterisk '*' to flag multiple token parsing,
+					comments are marked with ';' and text is skipped therafter.
 					See '/examples' folder and corresponding output for capabilities.
 
     AUTHOR:         Harris Georgiou (c) 2022
@@ -28,7 +29,7 @@ int main( int argc, char *argv[] )
 	FILE 	*fh;
 	char 	sline[STRMAXLEN], *skey, *sval;    // main string buffers for tokenizer
 	char 	smval[STRMAXLEN], prefix[STRMAXLEN], ptemp[STRMAXLEN], ptemp2[STRMAXLEN];    // temp string buffers
-	unsigned long  lines=0, entries=0, mpos=0;
+	unsigned long  lines=0, entries=0, comments=0, mpos=0;
 
 
 	if (argc!=2)
@@ -46,14 +47,19 @@ int main( int argc, char *argv[] )
 		strcpy(prefix,"");    // initialize section label to null
 		while(fgets(sline,STRMAXLEN,fh))
 		{
+			lines++;
 			mpos=strlen(sline)-1;
 			if (sline[mpos]=='\n')  sline[mpos]='\0';    // remove trailing CR/LF character
-			lines++;
 			
 			skey=strtok(sline,STRDELIM);    // initialize tokenizer for current line
 			if (skey)
 			{
-				if (skey[0]=='[')           // section label detected, handle as key-only
+				if (skey[0]==';')				// comment line detected, skip further text
+				{
+					comments++;
+					continue;
+				}
+				else if (skey[0]=='[')          // section label detected, handle as key-only
 				{
 					skey[strlen(skey)-1]='\0';     		// remove trailing ']' character
 					strcpy(prefix,&(skey[1]));     		// update prefix with section label...
@@ -74,6 +80,8 @@ int main( int argc, char *argv[] )
 					mpos=0;
 					while(sval)
 					{
+						if (sval[0]==';')  { comments++; break; }   // skip any comments in multi-value token
+						
 						strncat(&(smval[mpos]),sval,STRMAXLEN); 	// copy next single-value
 						mpos=strlen(smval);                         // update current length
 						strcat(&(smval[mpos])," ");  mpos++;    	// add a single space separator
@@ -104,7 +112,7 @@ int main( int argc, char *argv[] )
 		}
 	}
 	
-	printf("%lu lines, %lu entries processed\n",lines,entries);
+	printf("%lu lines, %lu entries, %lu comments processed\n",lines,entries,comments);
 	
 	return (0);
 }
