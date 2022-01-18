@@ -110,6 +110,8 @@ int main( int argc, char *argv[] )
 				printf("\n");		// DEBUG: remove if not needed
 			}				
 		}
+		
+		fclose(fh);
 	}
 	
 	printf("%lu lines, %lu entries, %lu comments processed\n",lines,entries,comments);
