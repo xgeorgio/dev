@@ -15,7 +15,7 @@ Development and production projects:
   <li>OTP-engine: Minimalistic OTP generator in Java.</li>
   <li>J-GANNO: Generic framework for NN in Java.</li>
   <li>JGS: Java Graph-search System for games.</li>
-  <li>cfgparser-c: Configuration file parser in C.</li>
+  <li>cfgparser: Configuration file parser in C and C++.</li>
 </ul>
  
 Licenced under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)<br/>
