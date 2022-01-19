@@ -3,8 +3,6 @@
       ***         Artificial Neural Networks - Kohonen model         ***
       ***         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         ***
       ***                                                            ***
-      ***           Harris Georgiou, AM:4  (csst9328@cs.uoi.gr)      ***
-      ***     Dimitris Papadopoulos, AM:28 (csst9337@cs.uoi.gr)      ***
       ***                                                            ***
       ******************************************************************
 
