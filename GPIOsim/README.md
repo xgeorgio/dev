@@ -13,6 +13,6 @@ and automatically provided by the OS itself. Here is the basic functionality pro
   <li>Digital and analog I/O pins.</li>
   <li>Clock (digital) output pins.</li>
 </ul>
-<p>Note: The 'gpiosim_stateLloop.m' script demonstrates how a physical model can be implemented and integrated within the framework, 
+<p>Note: The 'gpiosim_state_loop.m' script demonstrates how a physical model can be implemented and integrated within the framework, 
 so that external GPIO sensing can be simulated. This example is a thrust-assisted falling object that uses simple linear control 
 to remain at a specific altitude, with plots plesented within the Matlab/Octave environment.</p>
