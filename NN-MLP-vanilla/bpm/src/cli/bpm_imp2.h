@@ -25,7 +25,7 @@
 //-----  General purpose utility routines  -----
 
 //... generic (fatal) error reporting ...
-void __inline fatal( const char *mes )
+void fatal( const char *mes )
 {
     printf("%s", mes);
     exit(1);
@@ -227,7 +227,7 @@ int initfiles( char *patfname, FILE **pat, Tmembuf *trn_buf, TCount npat,
 }
 
 //... close patterns files ...
-void __inline closefiles( FILE **pat, FILE **val, FILE **test )
+void closefiles( FILE **pat, FILE **val, FILE **test )
 {
    fclose(*pat);
    fclose(*val);
@@ -235,7 +235,7 @@ void __inline closefiles( FILE **pat, FILE **val, FILE **test )
 }
 
 //... read patterns from file (disabled, use buffered I/O instead) ...
-/*void __inline readpat( FILE *patfile, float *vec, int vecsize, float *dis, int dis_size)
+/*void readpat( FILE *patfile, float *vec, int vecsize, float *dis, int dis_size)
 {
     TCount i;
 
@@ -247,7 +247,7 @@ void __inline closefiles( FILE **pat, FILE **val, FILE **test )
 }*/
 
 //... read patterns from buffer ...
-void __inline readpat_buffered( Tmembuf *patbuff, float *vec, int vecsize, float *dis, int dis_size)
+void readpat_buffered( Tmembuf *patbuff, float *vec, int vecsize, float *dis, int dis_size)
 {
     TCount i;
 
@@ -261,7 +261,7 @@ void __inline readpat_buffered( Tmembuf *patbuff, float *vec, int vecsize, float
 }
 
 //... rewind patterns buffer ...
-void __inline rewind_buffered( Tmembuf *patbuff )
+void rewind_buffered( Tmembuf *patbuff )
 {
 	patbuff->pos=0;
 }
@@ -270,7 +270,7 @@ void __inline rewind_buffered( Tmembuf *patbuff )
 //-----  Network routines  -----
 
 //... initialize neurons ...
-int __inline init_neuron( TNeuron *neu, TCount nweights, TWeight *weights, TWeight theta)
+int init_neuron( TNeuron *neu, TCount nweights, TWeight *weights, TWeight theta)
 {
     TCount      count=0;
     
@@ -292,7 +292,7 @@ int __inline init_neuron( TNeuron *neu, TCount nweights, TWeight *weights, TWeig
 }
 
 //... initialize layer ...                                                                                
-int __inline init_layer( TLayer *lay, TCount nneurons )
+int init_layer( TLayer *lay, TCount nneurons )
 {
     if ((lay->neu = calloc(nneurons,sizeof(TNeuron)))==NULL)
     	return(1);              /* no initialization for array objects */
@@ -304,7 +304,7 @@ int __inline init_layer( TLayer *lay, TCount nneurons )
 }
                                         
 //... initialize network ...
-int __inline init_net( TNet *net, TCount nlayers )
+int init_net( TNet *net, TCount nlayers )
 {
     if ((net->lay = calloc(nlayers,sizeof(TLayer)))==NULL)
     	return(1);              /* no initialization for array objects */
@@ -411,14 +411,14 @@ void create_net( TNet *BP_net, TNet *aux_net, TWeight *coeff, TWeight *mcoeff,
 }
 
 //... finallize neuron ...
-void __inline done_neuron( TNeuron *neu )
+void done_neuron( TNeuron *neu )
 {
     free(neu->w);
     free(neu->wprev);
 }
 
 //... finallize layer ...
-void __inline done_layer( TLayer *lay )
+void done_layer( TLayer *lay )
 {
     TCount      nneurons;
     for ( nneurons=0; nneurons<(lay->nnum); nneurons++ )
@@ -427,7 +427,7 @@ void __inline done_layer( TLayer *lay )
 }
 
 //... finallize network (internals) ...
-void __inline ddone_net( TNet *net )
+void ddone_net( TNet *net )
 {
     TCount      nlayers;
     for ( nlayers=0; nlayers<(net->lnum); nlayers++ )
@@ -436,7 +436,7 @@ void __inline ddone_net( TNet *net )
 }
 
 //... finallize network ...
-void __inline done_net(TNet *bp, TNet *aux)
+void done_net(TNet *bp, TNet *aux)
 {
     ddone_net(bp);
     ddone_net(aux);
@@ -537,7 +537,7 @@ void copy_net(TNet *s, TNet *t)
 }
 
 //... transfer function (sigmoid or tanh) ...
-TValue __inline sigmoid( TValue val )
+TValue sigmoid( TValue val )
 {
     return (TValue)(1.0 / ( 1.0 + exp(-val) ));
 }
@@ -689,7 +689,7 @@ int recognised(TNet *bp, float *dis)
 }
 
 //... calculate network output error ...
-TValue __inline calcerror(TNet *bp, float *dis, int ds)
+TValue calcerror(TNet *bp, float *dis, int ds)
 {
    TCount cneu;
    TValue err=0.0;
@@ -842,7 +842,7 @@ TCount check_testset_c2( Tmembuf *tst_buf, int testsize, TValue *meanerr, TCount
 }
 
 //... check training set ...
-int __inline allpaterns( Tmembuf *trn_buf, TCount *howmany, TCount *patcount, TCount npat, TCount *iter)
+int allpaterns( Tmembuf *trn_buf, TCount *howmany, TCount *patcount, TCount npat, TCount *iter)
 {
     if(*patcount == npat )      // if and of training set is reached,
     {

@@ -14,6 +14,9 @@
 #ifndef     __BPM_CONST_H__
 #define     __BPM_CONST_H__
 
+#include <stdio.h>
+#include <math.h>
+
 typedef    int          TCount;
 typedef    float	    TWeight;
 typedef	   float	    TValue;	
