@@ -180,8 +180,7 @@ Allocate Extended Memory Block (Function 09h):
 ----------------------------------------------
 
     ARGS:   AH = 09h
-	    DX = Amount of extended memory being requested
-		 in K-bytes
+	    DX = Amount of extended memory being requested in K-bytes
     RETS:   AX = 0001h if the block is allocated,
 		 0000h otherwise
 	    DX = 16-bit handle to the allocated block
@@ -197,7 +196,7 @@ it is reserved for the caller and a 16-bit handle to that block is
 returned.  The handle should be used in all subsequent extended memory
 calls.  If no memory was allocated, the returned handle is null.
 
-    NOTE: Extended memory handles are scarce resources.   Programs
+    NOTE: Extended memory handles are scarce resources. Programs
 	  should try to allocate as few as possible at any one time.
 	  When all of a driver's handles are in use, any free
 	  extended memory is unavailable.
@@ -294,8 +293,8 @@ extended memory.
           SourceHandle and DestHandle do not have to refer to
           locked memory blocks.
 
-	  Length must be even.   Although not required, WORD-
-          aligned moves can be significantly faster on most machines.  
+	  Length must be even. Although not required, WORD-aligned moves 
+	      can be significantly faster on most machines.
           DWORD aligned move can be even faster on 80386 machines.
 
 	  If the source and destination blocks overlap, only
@@ -303,7 +302,7 @@ extended memory.
 	  destination base) are guaranteed to work properly.
 
 	  Programs should not enable the A20 line before calling
-	  this function.  The state of the A20 line is preserved.
+	  this function. The state of the A20 line is preserved.
 
 	  This function is guaranteed to provide a reasonable
 	  number of interrupt windows during long transfers.
